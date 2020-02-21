@@ -1,0 +1,29 @@
+cd ~/mining/2pac/cgminer
+nano /usbutils.c
+
+Change from:
+.drv = DRIVER_gekko,
+		.name = "GSD",
+		.ident = IDENT_GSD,
+		.idVendor = 0x10c4,
+		.idProduct = 0xea60,
+		.iManufacturer = "GekkoScience",
+  		.iProduct = "2Pac BM1384 Bitcoin Miner",
+		.config = 1,
+		.timeout = COMPAC_TIMEOUT_MS,
+		.latency = LATENCY_UNUSED,
+		INTINFO(gek1_ints) },
+    
+TO:
+// TTBIT Kennung hinzugefügt
+		.drv = DRIVER_gekko,
+		.name = "GSD",
+		.ident = IDENT_GSD,
+		.idVendor = 0x10c4,
+		.idProduct = 0xea60,
+		.iManufacturer = "Silicon Labs",
+		.iProduct = "TTbit Bitcoin Miner",
+		.config = 1,
+		.timeout = COMPAC_TIMEOUT_MS,
+		.latency = LATENCY_UNUSED,
+		INTINFO(gek1_ints) },
